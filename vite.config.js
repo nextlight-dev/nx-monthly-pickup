@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  base: '/nx-monthly-pickup/',
-})
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/nx-monthly-pickup/' : '/',
+}))
