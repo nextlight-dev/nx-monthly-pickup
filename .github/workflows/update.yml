@@ -1,0 +1,57 @@
+name: Update Playlist
+
+on:
+  workflow_dispatch:
+    inputs:
+      playlist_url:
+        description: "YouTube プレイリスト URL"
+        required: false
+        default: "https://www.youtube.com/playlist?list=PLU0rNA-At9MKseLxkleWNHra-1oa65CLd"
+      month:
+        description: "対象月 (例: 2026-03)。空欄で当月"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install yt-dlp
+
+      - name: Fetch playlist data
+        env:
+          PLAYLIST_URL: ${{ github.event.inputs.playlist_url }}
+        run: |
+          MONTH_ARG="${{ github.event.inputs.month }}"
+          if [ -n "$MONTH_ARG" ]; then
+            python3 scripts/fetch-playlist.py "$MONTH_ARG"
+          else
+            python3 scripts/fetch-playlist.py
+          fi
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update playlist data"
+            git push
+          fi

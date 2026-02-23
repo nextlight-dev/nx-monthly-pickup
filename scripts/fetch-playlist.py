@@ -2,11 +2,14 @@
 """Fetch YouTube playlist metadata and save as monthly archive.
 
 Usage:
-  python3 scripts/fetch-playlist.py              # current month (e.g. 2026-02)
-  python3 scripts/fetch-playlist.py 2026-01      # specific month
+  python3 scripts/fetch-playlist.py                          # default playlist, current month
+  python3 scripts/fetch-playlist.py 2026-01                  # default playlist, specific month
+  python3 scripts/fetch-playlist.py --url <PLAYLIST_URL>     # custom playlist URL
+  python3 scripts/fetch-playlist.py --url <URL> 2026-03      # custom URL + specific month
 """
 
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,7 +21,7 @@ except ImportError:
     sys.exit(1)
 
 # --- Configuration ---
-PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLU0rNA-At9MKseLxkleWNHra-1oa65CLd"
+DEFAULT_PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLU0rNA-At9MKseLxkleWNHra-1oa65CLd"
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "public" / "data"
 INDEX_FILE = DATA_DIR / "index.json"
@@ -35,13 +38,25 @@ def save_index(index):
 
 
 def main():
-    # Determine target month
-    if len(sys.argv) > 1:
-        month = sys.argv[1]
-    else:
-        month = datetime.now().strftime("%Y-%m")
+    # Parse args
+    args = [a for a in sys.argv[1:] if a != "--url"]
+    url_flag = "--url" in sys.argv
+    playlist_url = None
+    month = None
 
-    print(f"Fetching playlist for {month}: {PLAYLIST_URL}")
+    if url_flag:
+        idx = sys.argv.index("--url")
+        if idx + 1 < len(sys.argv):
+            playlist_url = sys.argv[idx + 1]
+            args = [a for a in sys.argv[1:] if a not in ("--url", playlist_url)]
+
+    # Environment variable override (for GitHub Actions)
+    playlist_url = playlist_url or os.environ.get("PLAYLIST_URL") or DEFAULT_PLAYLIST_URL
+
+    # Remaining arg = target month
+    month = args[0] if args else datetime.now().strftime("%Y-%m")
+
+    print(f"Fetching playlist for {month}: {playlist_url}")
 
     ydl_opts = {
         "quiet": True,
@@ -50,7 +65,7 @@ def main():
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(PLAYLIST_URL, download=False)
+        info = ydl.extract_info(playlist_url, download=False)
 
     if not info:
         print("[ERROR] Failed to extract playlist info", file=sys.stderr)
