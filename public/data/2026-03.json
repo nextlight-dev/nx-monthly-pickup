@@ -1,13 +1,43 @@
 {
   "month": "2026-03",
   "title": "2026年3月のピックアップ",
-  "fetched_at": "2026-02-23T12:28:29.109853+00:00",
+  "fetched_at": "2026-02-23T14:18:03.656703+00:00",
   "videos": [
     {
       "id": "-VpIwCgO4zs",
       "title": "purini - you can (not) save me feat.音街ウナ",
       "channel": "purini",
       "duration": 151
+    },
+    {
+      "id": "XhdZmDXjndw",
+      "title": "picco × nyankobrq × Yaca - TRYNA feat.初音ミク [Vocaloid Electro]",
+      "channel": "picco and Akina 秋奈 YouTube",
+      "duration": 175
+    },
+    {
+      "id": "ctFmqTzIAAM",
+      "title": "Mi7s3 - C.L.I.P. ft. 初音ミク(official audio)",
+      "channel": "Mi7s3",
+      "duration": 135
+    },
+    {
+      "id": "4IdW_NKE5HY",
+      "title": "ジニア/Mused feat.Hime",
+      "channel": "Mused",
+      "duration": 255
+    },
+    {
+      "id": "YTEhAl-SrZ4",
+      "title": "プリンシプル / ゲキヤク",
+      "channel": "Rafutsuri",
+      "duration": 224
+    },
+    {
+      "id": "3t3pL65w3UM",
+      "title": "adomiori - スペル、なぞって (feat.音街ウナ)",
+      "channel": "Adomiori",
+      "duration": 161
     }
   ]
 }
