@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/nx_emblem.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NX MONTHLY PICKUP | NEXTLIGHT</title>
+    <meta name="description" content="NEXTLIGHTが毎月ピックアップするおすすめ楽曲セレクション" />
+
+    <meta property="og:title" content="NX MONTHLY PICKUP" />
+    <meta property="og:description" content="NEXTLIGHTが毎月ピックアップするおすすめ楽曲セレクション" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <img src="/nx_logo.svg" alt="NEXTLIGHT" class="nav-logo" />
+        </div>
+        <a href="https://nextlight.io" class="nav-link" target="_blank" rel="noopener noreferrer">公式サイト</a>
+      </div>
+    </nav>
+
+    <main class="page">
+      <header class="hero">
+        <div class="hero-inner">
+          <p class="hero-eyebrow hero-anim" id="header-meta"></p>
+          <h1 class="hero-title">
+            <span class="hero-line hero-anim" style="--i:1">NX MONTHLY</span>
+            <span class="hero-line hero-anim" style="--i:2">PICKUP</span>
+          </h1>
+          <p class="hero-subtitle hero-anim" style="--i:3">NEXTLIGHTが毎月届けるおすすめセレクション</p>
+        </div>
+      </header>
+
+      <section class="content">
+        <nav class="month-nav" id="month-nav" aria-label="月別ナビゲーション"></nav>
+        <div class="video-grid" id="video-grid"></div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <img src="/nx_logo.svg" alt="NEXTLIGHT" class="footer-logo" />
+          <p>&copy; 2026 NEXTLIGHT</p>
+        </div>
+        <p class="footer-note">表示順はアクセスごとにランダムです</p>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

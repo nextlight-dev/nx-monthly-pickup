@@ -1,0 +1,15 @@
+{
+  "name": "nx-monthly-pickup",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch": "python3 scripts/fetch-playlist.py",
+    "dev": "vite",
+    "build": "npm run fetch && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
