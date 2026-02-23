@@ -1,5 +1,7 @@
 import './style.css'
 
+const BASE = import.meta.env.BASE_URL
+
 function formatDuration(seconds) {
   if (!seconds || seconds <= 0) return '0:00'
   const h = Math.floor(seconds / 3600)
@@ -86,7 +88,7 @@ async function loadMonth(month, months) {
   const grid = document.getElementById('video-grid')
 
   try {
-    const res = await fetch(`/data/${month}.json`)
+    const res = await fetch(`${BASE}data/${month}.json`)
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const data = await res.json()
 
@@ -121,7 +123,7 @@ async function loadMonth(month, months) {
 
 async function init() {
   try {
-    const res = await fetch('/data/index.json')
+    const res = await fetch(`${BASE}data/index.json`)
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const index = await res.json()
 
@@ -136,7 +138,7 @@ async function init() {
     // Fallback: try legacy playlist.json
     console.warn('No index.json, trying legacy playlist.json:', err.message)
     try {
-      const res = await fetch('/data/playlist.json')
+      const res = await fetch(`${BASE}data/playlist.json`)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
 
