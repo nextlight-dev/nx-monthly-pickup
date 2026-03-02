@@ -1,14 +1,8 @@
 {
   "month": "2026-03",
   "title": "2026年3月のピックアップ",
-  "fetched_at": "2026-02-23T14:18:03.656703+00:00",
+  "fetched_at": "2026-03-02T03:35:00.026254+00:00",
   "videos": [
-    {
-      "id": "-VpIwCgO4zs",
-      "title": "purini - you can (not) save me feat.音街ウナ",
-      "channel": "purini",
-      "duration": 151
-    },
     {
       "id": "XhdZmDXjndw",
       "title": "picco × nyankobrq × Yaca - TRYNA feat.初音ミク [Vocaloid Electro]",
@@ -22,22 +16,88 @@
       "duration": 135
     },
     {
-      "id": "4IdW_NKE5HY",
-      "title": "ジニア/Mused feat.Hime",
-      "channel": "Mused",
-      "duration": 255
+      "id": "-VpIwCgO4zs",
+      "title": "purini - you can (not) save me feat.音街ウナ",
+      "channel": "purini",
+      "duration": 151
     },
     {
-      "id": "YTEhAl-SrZ4",
-      "title": "プリンシプル / ゲキヤク",
-      "channel": "Rafutsuri",
-      "duration": 224
+      "id": "2CZwNhqdb9M",
+      "title": "Kakuly - Despair (feat.初音ミク)",
+      "channel": "Kakuly",
+      "duration": 372
     },
     {
-      "id": "3t3pL65w3UM",
-      "title": "adomiori - スペル、なぞって (feat.音街ウナ)",
-      "channel": "Adomiori",
-      "duration": 161
+      "id": "HcAStydiXMg",
+      "title": "BOMAYE - イシュタル (feat. 初音ミク)",
+      "channel": "BOMAYE",
+      "duration": 290
+    },
+    {
+      "id": "b6x4rXrMb9g",
+      "title": "Mwk - Brilliance (feat. Hatsune Miku)",
+      "channel": "Mwk / みわく",
+      "duration": 176
+    },
+    {
+      "id": "rDLgXHt4yE8",
+      "title": "ReWiND (リワインド) / 初音ミク",
+      "channel": "あたたかい水族館",
+      "duration": 280
+    },
+    {
+      "id": "v0JcLyWZxXc",
+      "title": "ラプス / kr-KuuRa feat. 初音ミク",
+      "channel": "kr-KuuRa",
+      "duration": 247
+    },
+    {
+      "id": "iASR7iLM1as",
+      "title": "Vocaloid Unlimited",
+      "channel": "Guernica Helvetica",
+      "duration": 180
+    },
+    {
+      "id": "wSRdSwlb7SY",
+      "title": "Aiobahn +81 & Explorers of the Internet - plug n pray (feat. 重音テト) [Official Audio]",
+      "channel": "Aiobahn",
+      "duration": 183
+    },
+    {
+      "id": "pIuQ_us5W4Y",
+      "title": "[MV] TAK - ‘MTMTM’ feat. Hatsune Miku",
+      "channel": "TAK / DORIDORI",
+      "duration": 133
+    },
+    {
+      "id": "43QUt4G3fK0",
+      "title": "空白都市 / 初音ミク、ナースロボ_タイプT",
+      "channel": "鬱桑型",
+      "duration": 212
+    },
+    {
+      "id": "dV8GA40jJlI",
+      "title": "12AM、空想の記憶/音街ウナ",
+      "channel": "quxono",
+      "duration": 199
+    },
+    {
+      "id": "EWLacMkrj3w",
+      "title": "echoes [Kotori remix]",
+      "channel": "vai5000",
+      "duration": 265
+    },
+    {
+      "id": "loHT_iRqd4Q",
+      "title": "あおいろの部屋の鍵を閉めることに賛成します。 - 可不",
+      "channel": "smile dog",
+      "duration": 205
+    },
+    {
+      "id": "fZCsLokwekM",
+      "title": "Anomaly ft. 初音ミク / Bowne",
+      "channel": "Bowne",
+      "duration": 216
     }
   ]
 }
