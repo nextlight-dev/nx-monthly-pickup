@@ -21,7 +21,7 @@
   --radius-sm: 12px;
 
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
-  --content-max: 980px;
+  --content-max: 1200px;
 }
 
 /* ==========================================
@@ -232,7 +232,7 @@ img {
    ========================================== */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
   max-width: var(--content-max);
   margin: 0 auto;
